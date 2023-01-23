@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'button.dart';
 
 class ButtonRow extends StatelessWidget {
-final List<Button> buttons;
+  final List<Button> buttons;
 
   const ButtonRow({Key? key, required this.buttons}) : super(key: key);
 
@@ -12,7 +12,10 @@ final List<Button> buttons;
       flex: 1,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: buttons,
+        children: buttons.fold(<Widget>[], (list, b) {
+          list.isEmpty ? list.add(b) : list.addAll([SizedBox(width: 2), b]);
+          return list;
+        }),
       ),
     );
   }

@@ -20,7 +20,7 @@ class Display extends StatelessWidget {
               child: AutoSizeText(
                 text,
                 minFontSize: 20,
-                maxFontSize: 30,
+                maxFontSize: 80,
                 maxLines: 1,
                 textAlign: TextAlign.end,
                 style: const TextStyle(
