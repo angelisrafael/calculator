@@ -61,7 +61,7 @@ class Keyboard extends StatelessWidget {
               Button.big(
                 text: '0', cb: cb,
               ),
-              Button(text: ',', cb: cb,),
+              Button(text: '.', cb: cb,),
               Button.operation(text: '=', cb: cb,),
             ],
           ),
